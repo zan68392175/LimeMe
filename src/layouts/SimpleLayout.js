@@ -1,7 +1,8 @@
+// 是我们的后台首页需要使用的。包括有公用的头部，公用的左侧等组件
 import React from 'react';
 import { connect } from 'dva';
-import { Layout, Menu, Icon } from 'antd';
-import Link from 'umi/link';
+import { Layout, Icon } from 'antd';
+import LvMenu from './components/LvMenu';
 import styles from './SimpleLayout.scss';
 
 const { Header, Sider, Content } = Layout;
@@ -13,30 +14,16 @@ class SimpleLayout extends React.Component {
 
   toggle = () => {
     this.setState({
-      collapsed: !this.state.collapsed
-    })
-  }
+      collapsed: !this.state.collapsed,
+    });
+  };
 
   render() {
     return (
       <Layout className={styles.normal}>
         <Sider trigger={null} collapsible collapsed={this.state.collapsed}>
           <div className={styles.logo} />
-          <Menu theme="dark" mode="inline">
-            {this.props.menus.map(item => {
-              return (
-                <Menu.Item
-                  key={item.id}
-                  className={this.props.match.path === item.href ? 'ant-menu-item-selected' : ''}
-                >
-                  <Link to={item.href}>
-                    <Icon type={item.icon} />
-                    <span>{ item.name }</span>
-                  </Link>
-                </Menu.Item>
-              )
-            })}
-          </Menu>
+          <LvMenu match={this.props.match} />
         </Sider>
         <Layout>
           <Header style={{ background: '#fff', padding: 0 }}>
@@ -58,13 +45,14 @@ class SimpleLayout extends React.Component {
           </Content>
         </Layout>
       </Layout>
-    )
+    );
   }
 }
 
 export default connect(
-  ({global}) => ({
-    menus: global.menus
+  ({ global }) => ({
+    menus: global.menus,
+    user: global.user,
   }),
-  null
-)(SimpleLayout)
+  null,
+)(SimpleLayout);
