@@ -13,7 +13,7 @@ export default {
     menus: [
       { id: 1, icon: 'user', name: 'Welcome', href: '/', role: '' },
       { id: 2, icon: 'video-camera', name: '用户管理', href: '/user/manage', role: 'admin' },
-      { id: 3, icon: 'video-camera', name: '文章管理', href: '/post/manage', role: 'admin' },
+      { id: 3, icon: 'video-camera', name: '个人管理', href: '/me/getMe', role: 'admin' },
     ],
 
     // 当前登录的用户个人信息

@@ -1,10 +1,28 @@
 // 注意点：css-module 的类名不能使用短横线，需要使用_
+html,body{
+  height: 100%;
+  width: 100%;
+}
+.bg{
+  width: 100%;
+  height: 100%;
+  background: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1568008760402&di=787fc2476fc9cc94707a1e173836ccf9&imgtype=0&src=http%3A%2F%2Fimg.zhux2.com%2Feditor1504597041728618.jpg)
+  center no-repeat;
+  background-size: 100% 100%; 
+}
 .login_form {
-  max-width: 300px;
+  width: 300px;
+  height: 220px;
+  border-radius: 5px;
   padding: 20px;
-  margin: 100px auto;
+  margin: auto;
   border: 1px solid #ccc;
   background: #fff;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 .login_form_forgot {
   float: right;

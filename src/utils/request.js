@@ -2,7 +2,7 @@ import axios from 'axios';
 import { message } from 'antd';
 
 const request = axios.create({
-  baseURL: 'http://127.0.0.1:3333',
+  baseURL: 'http://58.87.126.209:3333',
   timeout: 2 * 1000, // 网络超时时间的设置
 });
 
