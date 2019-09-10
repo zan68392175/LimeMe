@@ -1,0 +1,43 @@
+.wrap{
+  display: block;
+  background: #fff;
+  margin: 24px 16px;
+  padding: 24px;
+
+  h1{
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 50px;
+  }
+
+  .add{
+    margin: 20px 0;
+
+    button{
+      background: #1890FF;
+      border: 0;
+      width: 60px;
+      line-height: 30px;
+      border-radius: 3px;
+      outline: none;
+      color: #FFF;
+      cursor: pointer;
+    }
+  }
+}
+
+
+.login_form {
+  width: 100%;
+  border-radius: 5px;
+  padding: 20px;
+  margin: auto;
+  background: #fff;
+}
+.login_form_forgot {
+  float: right;
+}
+.login_form_button {
+  width: 100%;
+}
+

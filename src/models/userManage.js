@@ -6,6 +6,10 @@ export default {
   state: {
     userList: [],
     total: 1, // 用户的总条数
+    // 二次调用用户页码
+    pa: 1,
+    pz: 10,
+
   },
 
   reducers: {
@@ -15,6 +19,8 @@ export default {
         ...{
           userList: action.userList,
           total: action.total,
+          pa: action.pa,
+          pz: action.pz
         },
       };
     },
@@ -32,7 +38,10 @@ export default {
         type: 'setUserList',
         userList: result.users.data,
         total: result.users.total,
+        pa: result.users.page,
+        pz: result.users.perPage
       });
+      console.log(result)
     },
   },
 };
