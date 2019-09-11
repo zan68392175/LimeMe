@@ -39,6 +39,7 @@ class SimpleLayout extends React.Component {
               padding: 24,
               background: '#fff',
               minHeight: 280,
+              overflowY: 'auto',
             }}
           >
             {this.props.children}
