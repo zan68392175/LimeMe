@@ -79,7 +79,7 @@ class setMe extends React.Component {
             axios.post(`http://localhost:9090/userinfo`, values);
           }
         });
-        // this.props.history.replace('/me/getMe');
+        this.props.history.replace('/me/getMe');
       }
     });
   };
