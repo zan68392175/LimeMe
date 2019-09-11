@@ -33,17 +33,7 @@ class SimpleLayout extends React.Component {
               onClick={this.toggle}
             />
           </Header>
-          <Content
-            style={{
-              margin: '24px 16px',
-              padding: 24,
-              background: '#fff',
-              minHeight: 280,
-              overflowY: 'auto',
-            }}
-          >
-            {this.props.children}
-          </Content>
+          <Content className={styles.cen_bg}>{this.props.children}</Content>
         </Layout>
       </Layout>
     );

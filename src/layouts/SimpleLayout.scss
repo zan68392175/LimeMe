@@ -17,3 +17,16 @@
     margin: 16px;
   }
 }
+
+.cen_bg{
+  
+
+  &::after{
+    content: '';
+    display: block;
+    height: 0;
+    width: 100%;
+    overflow: hidden;
+    clear: both;
+  }
+}

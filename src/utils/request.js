@@ -28,7 +28,7 @@ request.interceptors.response.use(
     // 统一做错误提示
     let result = response.data;
     if (result.code !== 0) {
-      message.error(result.msg);
+      message.error(toString(result.msg));
       // 直接调用reject,让后续流程不在继续
       return Promise.reject(result.msg);
     }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'dva';
-import { Form, Icon, Input, Button, Row, Col } from 'antd';
+import { Form, Icon, Input, Button } from 'antd';
 import styles from './index.scss';
 
 class Login extends Component {
